@@ -50,7 +50,7 @@ misc1:addToggle("Anti AFK", true, function(vu)
         end)
 end)
 
-misc:addToggle("Noclip", false, function(v)
+misc1:addToggle("Noclip", false, function(v)
     
                if state then
    
@@ -1350,7 +1350,7 @@ game:GetService("ReplicatedStorage").Communication.Events.UpgradeMilestone:FireS
             end
                end)
             
-               Autofarm:Toggle("Auto Buy Worlds", false, function(t)
+               section1:addToggle("Auto Buy Worlds", false, function(t)
             buyworld = t
             while buyworld do task.wait(.2)
             local args = {
