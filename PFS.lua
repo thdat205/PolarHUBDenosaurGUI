@@ -74,14 +74,22 @@ end)
 
 spawn(function()
     game:GetService("ReplicatedStorage").Communication.Events.EquipBest:FireServer()
-    end)
+end)
     
 section1:addButton("Remove Coin Pop", function(t)
     equip = t
 while equip do wait(.4)
-game:GetService("ReplicatedStorage").Communication.Events.EquipBest:FireServer()
+    game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.PopUps.Coins:Destroy()
 end
 end)
+
+section1:addToggle("Auto Equip Best Pets", false, function(t)
+    equip = t
+    while equip do wait(.4)
+    game:GetService("ReplicatedStorage").Communication.Events.EquipBest:FireServer()
+    end
+       end)
+    
 
 section1:addToggle("Fast Attack", false, function(t)
     fast = t
